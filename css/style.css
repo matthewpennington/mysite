@@ -204,6 +204,10 @@ body {
 
 .about-facts li:last-child { border-bottom: none; }
 
+.about-facts a { color: var(--text); text-decoration-color: var(--accent); }
+
+.about-facts a:hover { color: var(--accent); }
+
 .fact-label {
   display: block;
   font-family: var(--font-mono);
@@ -271,6 +275,8 @@ body {
 
 .card-icon { font-size: 1.9rem; margin-bottom: 0.9rem; }
 
+.card-icon img { display: block; width: 2.6rem; height: 2.6rem; }
+
 .project-card h3,
 .interest-card h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
 
@@ -306,6 +312,216 @@ body {
 }
 
 .card-link:hover { text-decoration: underline; }
+
+.interest-card .card-link { margin-top: 1rem; }
+
+/* Make the whole card clickable: the card's "Read more" link stretches an
+   invisible layer over the entire card. Cards without a link are unaffected. */
+.project-card:has(.card-link),
+.interest-card:has(.card-link) {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card .card-link::after,
+.interest-card .card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.project-card:has(.card-link):hover .card-link,
+.interest-card:has(.card-link):hover .card-link { text-decoration: underline; }
+
+.project-card:has(.card-link:focus-visible),
+.interest-card:has(.card-link:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ============ Project detail pages ============ */
+.project-hero { padding: 4rem 1.5rem 1rem; }
+
+.project-hero h1 {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.project-hero .hero-sub { margin-bottom: 0.5rem; }
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--accent); }
+
+.project-figure {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  background: #000; /* black letterboxing around photos */
+}
+
+/* CAD renders keep a light background that matches the SolidWorks render */
+.project-figure img.render { background: #f4f6fa; }
+
+.project-figure figcaption {
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.wip-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-hero h1 .wip-badge { font-size: 0.8rem; }
+
+.subhead {
+  font-size: 1.15rem;
+  margin: 3rem 0 1.25rem;
+}
+
+.build-log {
+  list-style: none;
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+}
+
+.build-log li { position: relative; padding-bottom: 1.5rem; }
+
+.build-log li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 6px);
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.build-log time {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.build-log p { color: var(--text-muted); }
+
+/* 3D model viewer (js/model-viewer.js) */
+.model-viewer {
+  position: relative;
+  height: min(560px, 80vw);
+  background: radial-gradient(circle at 70% 20%, #ffffff, #dde2ec);
+}
+
+.project-figure .model-viewer img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  max-height: none;
+  background: none;
+}
+
+.model-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.model-canvas:active { cursor: grabbing; }
+
+.model-viewer-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.model-viewer-btn:disabled { cursor: progress; opacity: 0.85; transform: none; }
+
+.model-viewer.active img,
+.model-viewer.active .model-viewer-btn,
+.model-hint-active { display: none; }
+
+.project-figure:has(.model-viewer.active) .model-hint-idle { display: none; }
+.project-figure:has(.model-viewer.active) .model-hint-active { display: inline; }
+
+/* The Girls page */
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+}
+
+.pet-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pet-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.pet-photo-placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--border);
+}
+
+.pet-photo-placeholder img { width: 45%; height: auto; }
+
+.pet-body { padding: 1.4rem; }
+
+.pet-body h3 { margin-bottom: 1rem; font-size: 1.2rem; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
 
 /* ============ Contact ============ */
 .contact { text-align: center; }
@@ -381,4 +597,78 @@ body {
   .hero { padding-top: 4.5rem; }
 
   .about-grid { grid-template-columns: 1fr; }
+}
+
+/* ============ Photo lightbox (js/main.js) ============ */
+img.zoomable { cursor: zoom-in; }
+img.zoomable:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+body.lightbox-open { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 4rem;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox-figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-caption {
+  color: #e6edf3;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.lightbox-btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-btn:hover,
+.lightbox-btn:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+
+.lightbox-btn[hidden] { display: none; }
+
+.lightbox-close { top: 1rem; right: 1rem; font-size: 1.2rem; }
+.lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 640px) {
+  .lightbox { padding: 3.5rem 0.5rem 4.5rem; }
+  .lightbox-prev, .lightbox-next { top: auto; bottom: 1rem; transform: none; }
+  .lightbox-img { max-height: calc(100vh - 11rem); }
 }

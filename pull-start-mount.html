@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyFox Pull Start Mount — Matt Pennington</title>
+  <meta name="description" content="Redesigning the failed pull start mount on a SkyFox paramotor with a carbon fiber support rod, 3D-printed clamps, and machined aluminum anti-rotation blocks.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/vendor/three/build/three.module.js",
+        "three/addons/": "./js/vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">mattpennington<span class="accent">.</span>net</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#interests">Interests</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ PROJECT HEADER ============ -->
+    <section class="project-hero container">
+      <a href="index.html#projects" class="back-link">← All projects</a>
+      <p class="hero-eyebrow">// fabrication · powered paragliding</p>
+      <h1>SkyFox Pull Start Mount <span class="wip-badge">Work in progress</span></h1>
+      <p class="hero-sub">
+        The original pull start mount on my SkyFox paramotor failed, so I'm
+        redesigning it around a carbon fiber support rod that also gives my GPS
+        and instruments somewhere to mount.
+      </p>
+      <ul class="tag-list">
+        <li>SolidWorks</li><li>3D Printing</li><li>Carbon Fiber</li><li>PEM Inserts</li><li>Machining</li>
+      </ul>
+    </section>
+
+    <!-- ============ HERO IMAGE ============ -->
+    <section class="section container">
+      <figure class="project-figure">
+        <img src="images/pull-start/skyfox.jpg" alt="The SkyFox paramotor standing on pavement beside a grass airfield, harness facing the camera and the propeller cage behind">
+        <figcaption>My SkyFox paramotor.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> The Problem</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- EDIT ME: describe how the original mount failed (what broke, when, and why you think it did) -->
+          <p>
+            The pull start mount that came on my SkyFox paramotor failed. A
+            pull start takes a hard, sudden load every time the engine is
+            started, so the replacement has to be noticeably stronger than
+            the original.
+          </p>
+          <p>
+            Rather than just making a stronger copy of the original, I'm adding a carbon
+            fiber support rod to the design. The rod carries the pull start
+            load and doubles as a rail for mounting my GPS and other
+            instruments.
+          </p>
+        </div>
+        <ul class="about-facts">
+          <li><span class="fact-label">Status</span>Work in progress</li>
+          <li><span class="fact-label">Machine</span>SkyFox paramotor</li>
+          <li><span class="fact-label">CAD</span>SolidWorks</li>
+          <li><span class="fact-label">Mount</span>3D printed, two halves</li>
+          <li><span class="fact-label">Structure</span>Carbon fiber rod</li>
+          <li><span class="fact-label">Anti-rotation</span>Machined aluminum blocks</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> The Redesign</h2>
+      <p class="section-sub">How the new mount fits together.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-icon">📏</div>
+          <h3>Carbon Fiber Support Rod</h3>
+          <p>A carbon fiber rod supports the pull start, and gives me extra mounting points for my GPS and instruments.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">📐</div>
+          <h3>Printed Mount</h3>
+          <p>The mount is designed in SolidWorks and 3D printed in two halves that clamp together.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🔩</div>
+          <h3>Heat-Staked PEMs</h3>
+          <p>One half gets threaded PEM inserts heat-staked into it. Screws go in from the other half and thread into the inserts, so the screws bite into metal threads instead of plastic.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">⚙️</div>
+          <h3>Aluminum Anti-Rotation Blocks</h3>
+          <p>Two small machined aluminum blocks are glued into the carbon fiber rod to stop it from turning under the pull start load.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Assembly</h3>
+      <figure class="project-figure">
+        <img class="render" src="images/pull-start/assembly.png" alt="SolidWorks render of the assembly: the carbon fiber support rod spanning between two frame tubes, held by the left and right printed mounts" loading="lazy">
+        <figcaption>The carbon fiber rod spanning the frame between the left and right mounts.</figcaption>
+      </figure>
+
+      <h3 class="subhead">3D Models</h3>
+      <div class="gallery">
+        <figure class="project-figure">
+          <div class="model-viewer" data-model="models/pull-start/pulley_mnt_left_v3.step" data-autoload>
+            <button class="btn btn-primary model-viewer-btn" type="button">View in 3D</button>
+          </div>
+          <figcaption>
+            <span class="model-hint-idle">Left mount.</span>
+            <span class="model-hint-active">Drag to rotate · scroll or pinch to zoom · right-drag to pan</span>
+          </figcaption>
+        </figure>
+        <figure class="project-figure">
+          <div class="model-viewer" data-model="models/pull-start/pulley_mnt_right_v3.step" data-autoload>
+            <button class="btn btn-primary model-viewer-btn" type="button">View in 3D</button>
+          </div>
+          <figcaption>
+            <span class="model-hint-idle">Right mount.</span>
+            <span class="model-hint-active">Drag to rotate · scroll or pinch to zoom · right-drag to pan</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ BUILD LOG ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Build Log</h2>
+      <p class="section-sub">Updates as the project moves along.</p>
+      <!-- EDIT ME: add a new <li> at the top of the list for each update -->
+      <ol class="build-log">
+        <li>
+          <time datetime="2026-11">Nov 2026</time>
+          <p>Posted the assembly render and STEP models of the left and right mounts (v3).</p>
+        </li>
+        <li>
+          <time datetime="2026-11">Nov 2026</time>
+          <p>Redesign underway in SolidWorks: carbon fiber support rod, two-piece printed mount, and aluminum anti-rotation blocks.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container contact">
+      <a href="index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matt Pennington.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/model-viewer.js"></script>
+</body>
+</html>

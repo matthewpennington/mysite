@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPG FlyMaster Case — Matt Pennington</title>
+  <meta name="description" content="A custom 3D-printed case for a FlyMaster GPS, designed in SolidWorks with a laser-cut acrylic panel and heat-staked PEM inserts.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/vendor/three/build/three.module.js",
+        "three/addons/": "./js/vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">mattpennington<span class="accent">.</span>net</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#interests">Interests</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ PROJECT HEADER ============ -->
+    <section class="project-hero container">
+      <a href="index.html#projects" class="back-link">← All projects</a>
+      <p class="hero-eyebrow">// fabrication · powered paragliding</p>
+      <h1>PPG FlyMaster Case</h1>
+      <p class="hero-sub">
+        A custom case for my flight instructor's FlyMaster GPS — designed in
+        SolidWorks, 3D printed, and finished with a laser-cut acrylic window.
+      </p>
+      <ul class="tag-list">
+        <li>SolidWorks</li><li>3D Printing</li><li>Laser Cutting</li><li>PEM Inserts</li><li>Heat Staking</li>
+      </ul>
+    </section>
+
+    <!-- ============ 3D MODEL ============ -->
+    <section class="section container">
+      <figure class="project-figure">
+        <div class="model-viewer" data-model="models/flymaster/flymaster_v2.step" data-transparent="Plexiglass" data-rotate="0,0,-130" data-camera="0.3,-0.3,1">
+          <img src="images/flymaster/front.png" alt="Render of the FlyMaster case V2 from the front, showing the acrylic window held by button-head screws">
+          <button class="btn btn-primary model-viewer-btn" type="button">View in 3D</button>
+        </div>
+        <figcaption>
+          <span class="model-hint-idle">Front of the V2 assembly. Click "View in 3D" to explore the model.</span>
+          <span class="model-hint-active">Drag to rotate · scroll or pinch to zoom · right-drag to pan</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Overview</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- EDIT ME: add the backstory, e.g. what was wrong with the stock case or what your instructor needed -->
+          <p>
+            My flight instructor needed a case for their FlyMaster GPS, so I
+            designed one from scratch. It's a 3D-printed body with a clear
+            acrylic panel over the display, fastened with screws that thread
+            into brass PEM inserts set into the plastic.
+          </p>
+          <p>
+            The project brought three processes together: CAD modeling,
+            FDM printing, and laser cutting. The rest of this page covers each one.
+          </p>
+        </div>
+        <ul class="about-facts">
+          <li><span class="fact-label">Built for</span>My flight instructor</li>
+          <li><span class="fact-label">CAD</span>SolidWorks</li>
+          <li><span class="fact-label">Case</span>3D printed</li>
+          <li><span class="fact-label">Window</span>Acrylic, 40W CO2 laser</li>
+          <li><span class="fact-label">Fasteners</span>Heat-staked PEM inserts</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BUILD ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> The Build</h2>
+      <p class="section-sub">From CAD model to finished part.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-icon">📐</div>
+          <h3>Design in SolidWorks</h3>
+          <!-- EDIT ME: add design details (fit tolerances, how you modeled the GPS, revisions) -->
+          <p>I modeled the case around the GPS unit as a top and bottom shell, with a recessed pocket for the acrylic window and bosses for the fastener inserts.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🔥</div>
+          <h3>Laser-Cut Acrylic</h3>
+          <!-- EDIT ME: add acrylic thickness, power/speed settings, and anything you learned -->
+          <p>I exported the window outline from SolidWorks as a DXF and cut it from clear acrylic on a 40W CO2 laser, which leaves clean, flame-polished edges.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🔩</div>
+          <h3>Heat-Staked PEMs</h3>
+          <!-- EDIT ME: add insert size/thread and the tool you used to press them in -->
+          <p>I pressed threaded PEM inserts into the printed case with heat. The melted plastic flows around the insert's knurling and locks it in, so the window screws thread into metal rather than plastic.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Gallery</h2>
+      <!-- EDIT ME: add photos of the finished case — drop them in images/flymaster/ and copy a <figure> block -->
+      <div class="gallery">
+        <figure class="project-figure">
+          <img src="images/flymaster/flymaster-gps.jpg" alt="The FlyMaster GPS vario: a backlit LCD showing altitude, speed and climb rate above a row of five buttons" style="background:#000">
+          <figcaption>The FlyMaster GPS the case is built around</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/flymaster/front.png" alt="Front render of the FlyMaster case">
+          <figcaption>Front: acrylic window and fasteners</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img class="render" src="images/flymaster/back.png" alt="Back render of the FlyMaster case">
+          <figcaption>Back: flat base and ribbed grip edge</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img class="render" src="images/flymaster/side.png" alt="Side render of the FlyMaster case">
+          <figcaption>Side: low profile</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section container contact">
+      <a href="index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matt Pennington.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/model-viewer.js"></script>
+</body>
+</html>
