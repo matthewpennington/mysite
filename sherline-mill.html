@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sherline 5400 Mill CNC Control Panel — Matt Pennington</title>
+  <meta name="description" content="A CNC control panel for a Sherline 5400 mill: FluidNC controller, DM556T stepper drivers, and 3D-printed DIN-rail mounts and panels.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">mattpennington<span class="accent">.</span>net</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#interests">Interests</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ PROJECT HEADER ============ -->
+    <section class="project-hero container">
+      <a href="index.html#projects" class="back-link">← All projects</a>
+      <p class="hero-eyebrow">// fabrication · cnc</p>
+      <h1>Sherline 5400 Mill CNC Control Panel <span class="wip-badge">Work in progress</span></h1>
+      <!-- EDIT ME: check this summary -->
+      <p class="hero-sub">
+        A CNC control panel for my Sherline 5400 mill, built around a
+        FluidNC controller and DM556T stepper drivers on 3D-printed DIN-rail mounts.
+      </p>
+      <ul class="tag-list">
+        <li>SolidWorks</li><li>3D Printing</li><li>FluidNC</li><li>Stepper Drivers</li><li>CNC</li>
+      </ul>
+    </section>
+
+    <!-- ============ HERO IMAGE ============ -->
+    <section class="section container">
+      <figure class="project-figure">
+        <img src="images/sherline/panel-finished.jpg" alt="The finished CNC control panel mounted on the wall beside the Sherline 5400 mill: a gray enclosure with a touchscreen showing the FluidNC interface, an e-stop, a selector switch, a wireless keyboard, and a pendant on the side">
+        <figcaption>The control panel, mounted beside the mill and running FluidNC.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Overview</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- EDIT ME: the backstory — why you're converting/upgrading the mill and what the control panel needs to do -->
+          <p>
+            The Sherline 5400 is a small benchtop mill. To run it under CNC,
+            I'm building a control panel that houses all of its electronics
+            in one place.
+          </p>
+          <p>
+            The motion controller is an ESP32-based FluidNC board driving four
+            DM556T stepper drivers. I designed everything around them in
+            SolidWorks: DIN-rail mounts for the drivers and controller, front
+            panels for power and the stepper connections, and a mount for the
+            pendant.
+          </p>
+          <p>
+            The mill enclosure is a separate project:
+            <a class="card-link" href="sherline-mill-enclosure.html">Sherline 5400 Mill Enclosure →</a>
+          </p>
+        </div>
+        <ul class="about-facts">
+          <!-- EDIT ME: check these and fill in anything missing (power supply, panel box, motors) -->
+          <li><span class="fact-label">Status</span>Work in progress</li>
+          <li><span class="fact-label">Machine</span>Sherline 5400 mill</li>
+          <li><span class="fact-label">Controller</span>FluidNC (ESP32)</li>
+          <li><span class="fact-label">Drivers</span>4× DM556T</li>
+          <li><span class="fact-label">CAD</span>SolidWorks</li>
+          <li><span class="fact-label">Printed parts</span>DIN mounts, panels, pendant mount</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BUILD ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> The Build</h2>
+      <p class="section-sub">The pieces that make up the control panel.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-icon">🧠</div>
+          <h3>FluidNC Controller</h3>
+          <p>An ESP32-based board running FluidNC handles motion control. It sits on a printed DIN-rail mount alongside the drivers.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">⚡</div>
+          <h3>DM556T Drivers</h3>
+          <p>Four DM556T stepper drivers, each on its own printed DIN-rail mount, run the mill's motors.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🔌</div>
+          <h3>Panels &amp; Cable Glands</h3>
+          <p>Printed power and stepper panels, with cable glands, bring wiring in and out of the control panel.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🎛️</div>
+          <h3>Pendant Mount</h3>
+          <p>A printed mount holds the handheld pendant for jogging the machine.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Gallery</h2>
+      <!-- EDIT ME: check the captions; add photos by dropping them in images/sherline/ and copying a <figure> block -->
+      <div class="gallery">
+        <figure class="project-figure">
+          <img src="images/sherline/bench-test.jpg" alt="Electronics laid out on the bench for testing: the mill with its motors, three stepper drivers, a FluidNC board in an anti-static bag, a power supply, a small monitor and a keyboard" loading="lazy">
+          <figcaption>Bench test before anything went in the box</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-build-open.jpg" alt="The enclosure open on a workbench mid-build: a Raspberry Pi and connectors on the door, and power supplies, a servo drive, the FluidNC board and four stepper drivers on the back panel" loading="lazy">
+          <figcaption>Mid-build: door hardware on the left, drives and power on the right</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-interior.jpg" alt="Close-up of the wired enclosure interior: Mean Well 24V and 12V DIN-rail supplies, a servo drive, the FluidNC board, four stepper drivers, cooling fans, and rows of terminal blocks" loading="lazy">
+          <figcaption>Wired up: supplies, drives, FluidNC board and terminal blocks</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-open-by-mill.jpg" alt="The control panel mounted on the wall with its door open, next to the mill on its stainless tray" loading="lazy">
+          <figcaption>Mounted on the wall, door open</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-screen-fit.jpg" alt="A touchscreen test-fitted into the enclosure door, showing a desktop wallpaper" loading="lazy">
+          <figcaption>Test-fitting the touchscreen in the door</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-front.jpg" alt="Front of the control panel with the FluidNC web interface on screen, a red e-stop and a selector switch" loading="lazy">
+          <figcaption>Screen, e-stop and selector switch</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/panel-fluidnc-ui.jpg" alt="Front of the finished control panel with the Sherline 5400 badge, FluidNC logo and a wireless keyboard in its holder" loading="lazy">
+          <figcaption>Finished front with the Sherline 5400 badge</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/pendant.jpg" alt="A round pendant with an orange bezel and a color touchscreen menu, held in a mount on the bench" loading="lazy">
+          <figcaption>Programming and testing the pendant</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/fluidnc-din-mount.jpg" alt="The FluidNC controller board sitting on a black 3D-printed DIN-rail mount on the bench" loading="lazy">
+          <figcaption>FluidNC board on its printed DIN-rail mount</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/first-setup.jpg" alt="The mill on its stainless tray with loose wiring and an empty clear enclosure beside it on the bench" loading="lazy">
+          <figcaption>Early wiring, before the enclosure was filled</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/mill-steppers.jpg" alt="The Sherline mill on its stainless tray with stepper motors on each axis and cables running to the control panel" loading="lazy">
+          <figcaption>The mill with its stepper motors</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/sherline/mill-and-panel-2026.jpg" alt="The mill on its tray in front of the wall-mounted control panel with the FluidNC interface on screen" loading="lazy">
+          <figcaption>Mill and control panel, spring 2026</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ BUILD LOG ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Build Log</h2>
+      <p class="section-sub">Updates as the project moves along.</p>
+      <!-- EDIT ME: add a new <li> at the top of the list for each update -->
+      <ol class="build-log">
+        <li>
+          <time datetime="2025-10">Fall 2025</time>
+          <p>Electronics layout, DIN-rail mounts, and panels designed in SolidWorks.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container contact">
+      <a href="index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matt Pennington.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

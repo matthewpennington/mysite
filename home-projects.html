@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Projects — Matt Pennington</title>
+  <meta name="description" content="Fixes, upgrades, and builds around the house.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">mattpennington<span class="accent">.</span>net</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#interests">Interests</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HEADER ============ -->
+    <section class="project-hero container">
+      <a href="index.html#interests" class="back-link">← Beyond the Bench</a>
+      <p class="hero-eyebrow">// interests</p>
+      <h1>Home Projects</h1>
+      <!-- EDIT ME: a short intro to your home projects -->
+      <p class="hero-sub">
+        Fixes, upgrades, and builds around the house.
+      </p>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Projects</h2>
+      <p class="section-sub">More write-ups coming soon.</p>
+      <!-- EDIT ME: add a project-card per home project (copy one from index.html) -->
+      <div class="project-grid"></div>
+    </section>
+
+    <!-- ============ THELIN FAN REPLACEMENT ============ -->
+    <section class="section container" id="thelin-fan">
+      <h2><span class="prompt" aria-hidden="true">//</span> Thelin Stove Fan Replacement</h2>
+      <!-- EDIT ME: what went wrong with the old fan, and how you fitted the new
+           one (what the brass bushing is for, measurements, part numbers) -->
+      <p class="section-sub">
+        Replacing the fan wheel in our Thelin pellet stove.
+      </p>
+      <div class="gallery">
+        <figure class="project-figure">
+          <img src="images/home/thelin-fan-wheel.jpg" alt="A new stamped-steel fan wheel on a workbench next to a small brass bushing and a digital caliper" loading="lazy">
+          <figcaption>The replacement fan wheel and a brass bushing</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/home/thelin-fan-installed.jpg" alt="The new fan wheel fitted onto the motor shaft" loading="lazy">
+          <figcaption>Fitted on the motor shaft</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="images/home/thelin-stove.jpg" alt="The Thelin pellet stove on its tiled hearth pad with a fire burning behind the glass door" loading="lazy">
+          <figcaption>The Thelin stove, fire lit</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matt Pennington.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

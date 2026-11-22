@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Illustration of a Shiba Inu face">
+  <!-- Ears -->
+  <path d="M46 84 L56 20 Q60 14 66 20 L98 58 Z" fill="#d9822b" stroke="#d9822b" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M154 84 L144 20 Q140 14 134 20 L102 58 Z" fill="#d9822b" stroke="#d9822b" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M60 72 L63 36 L86 60 Z" fill="#f3d2b0" stroke="#f3d2b0" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M140 72 L137 36 L114 60 Z" fill="#f3d2b0" stroke="#f3d2b0" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Head -->
+  <path d="M100 50 C142 50 166 76 167 106 C168 136 150 162 100 166 C50 162 32 136 33 106 C34 76 58 50 100 50 Z" fill="#d9822b"/>
+
+  <!-- Cream cheeks and muzzle (urajiro) -->
+  <path d="M36 112 C50 106 70 112 84 102 C92 97 108 97 116 102 C130 112 150 106 164 112 C162 142 142 164 100 167 C58 164 38 142 36 112 Z" fill="#f6e3c6"/>
+
+  <!-- Eyebrow dots -->
+  <ellipse cx="78" cy="80" rx="7" ry="4.5" fill="#f6e3c6"/>
+  <ellipse cx="122" cy="80" rx="7" ry="4.5" fill="#f6e3c6"/>
+
+  <!-- Eyes -->
+  <ellipse cx="78" cy="96" rx="6.5" ry="5.5" fill="#2b1a10" transform="rotate(-12 78 96)"/>
+  <ellipse cx="122" cy="96" rx="6.5" ry="5.5" fill="#2b1a10" transform="rotate(12 122 96)"/>
+  <circle cx="80" cy="94" r="1.8" fill="#fff"/>
+  <circle cx="124" cy="94" r="1.8" fill="#fff"/>
+
+  <!-- Nose and mouth -->
+  <path d="M89 120 Q100 113 111 120 Q107 131 100 132 Q93 131 89 120 Z" fill="#1e1512"/>
+  <path d="M100 132 L100 139 M100 139 Q92 148 84 141 M100 139 Q108 148 116 141" fill="none" stroke="#1e1512" stroke-width="3" stroke-linecap="round"/>
+</svg>

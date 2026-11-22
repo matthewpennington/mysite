@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Always Learning — Matt Pennington</title>
+  <meta name="description" content="What I'm currently learning, starting with software-defined radio on an RTL-SDR.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">mattpennington<span class="accent">.</span>net</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#interests">Interests</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HEADER ============ -->
+    <section class="project-hero container">
+      <a href="index.html#projects" class="back-link">← All projects</a>
+      <p class="hero-eyebrow">// learning</p>
+      <h1>Always Learning</h1>
+      <!-- EDIT ME: a short intro -->
+      <p class="hero-sub">
+        Books, courses, and rabbit holes: whatever I'm currently digging into.
+      </p>
+    </section>
+
+    <!-- ============ RTL-SDR ============ -->
+    <section class="section container">
+      <h2><span class="prompt" aria-hidden="true">//</span> Software-Defined Radio <span class="wip-badge">Just started</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I recently bought a Nooelec NESDR Smart v5, an RTL-SDR in an
+            aluminum enclosure. It's a USB receiver built around the RTL2832U,
+            a chip originally made for digital TV dongles. With the right software it
+            becomes a wide-band, receive-only software-defined radio: the
+            hardware digitizes a slice of the radio spectrum, and the decoding
+            happens on the computer.
+          </p>
+          <p>
+            My plan is to put together a dedicated Linux box for it, so I can
+            leave it running and learn the software side properly.
+          </p>
+        </div>
+        <ul class="about-facts">
+          <!-- EDIT ME: fill in the Linux box specs once built -->
+          <li><span class="fact-label">Radio</span>Nooelec NESDR Smart v5</li>
+          <li><span class="fact-label">Chipset</span>RTL2832U + R820T2 tuner</li>
+          <li><span class="fact-label">Range</span>100 kHz – 1.75 GHz</li>
+          <li><span class="fact-label">Clock</span>0.5 PPM TCXO</li>
+          <li><span class="fact-label">Antennas</span>3 included, SMA input</li>
+          <li><span class="fact-label">Computer</span>Linux box (planned)</li>
+          <li><span class="fact-label">Status</span>Just getting started</li>
+        </ul>
+      </div>
+
+      <h3 class="subhead">Ideas to explore</h3>
+      <!-- EDIT ME: swap these for whatever you actually want to try -->
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-icon">✈️</div>
+          <h3>ADS-B Aircraft Tracking</h3>
+          <p>Decode the position broadcasts aircraft send on 1090 MHz and plot nearby traffic on a map.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">📻</div>
+          <h3>FM &amp; Airband</h3>
+          <p>Start simple: tune broadcast FM and listen in on local aviation frequencies.</p>
+        </article>
+        <article class="project-card">
+          <div class="card-icon">🌡️</div>
+          <h3>433 MHz Sensors</h3>
+          <p>Pick up wireless weather stations and other household sensors and log their readings.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Build log</h3>
+      <!-- EDIT ME: add a new <li> at the top for each update -->
+      <ol class="build-log">
+        <li>
+          <time datetime="2026-11">Nov 2026</time>
+          <p>Bought a Nooelec NESDR Smart v5 bundle. Next up: putting together a Linux box to run it.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDIT ME: add a new <section> like the one above for each new topic -->
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matt Pennington.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
